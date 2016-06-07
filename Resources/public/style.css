@@ -1,3 +1,7 @@
+html {
+    size: 1000px;
+}
+
 body {
     background-color: #000066;
 }
@@ -9,16 +13,16 @@ h3 {
     font-style: italic;
     color: #A3A3C2;
 }
+ul {
+    color: floralwhite;
+}
 
 footer {
-    font-size: .70em;
-    background-color: #000000;
-    color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    padding-top: 10px;
-    clear: both;
-    bottom: 900px;
+    height: 20px;   /* Height of the footer */
+    background: gray;
 }
- html {
-     size: 1000px;
- }
+
