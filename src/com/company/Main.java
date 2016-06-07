@@ -11,7 +11,15 @@ public class Main {
     static User user;
     static HashMap<String, User> map = new HashMap<>();
 
+    /** EXAMPLES OF MUSTACHE
+     * ArrayList<String> {{#names}} {{.}} -> pulls the whole field {{/name}}
+     * ArrayList<Message> msgs {{#msgs}} {{text}} {{/msgs}}
+     * Conditional {{#name}} Hi{{.}} {{/name}}
+     * Conditional {{name}} Not Logged In! {{/name}}
+     */
+
     public static void main(String[] args) {
+            Spark.staticFileLocation("public");
             Spark.init();
             Spark.get(
                     "/",

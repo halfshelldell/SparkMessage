@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Message</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<h1></h1>
-<h2>Messages by {{name}}</h2>
+<h1>Messages by {{name}}</h1>
+<h3>Written June 7th 2016.</h3>
 <form action="/create-message" method="post">
     <input type="text" name="createMessage" placeholder="Enter your message"/>
     <button type="submit">Message</button>
 </form>
 <br>
-<ol>
+<ol type="square">
     {{#message}}
     <li>{{message}}</li>
     {{/message}}

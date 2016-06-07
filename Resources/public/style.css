@@ -1,0 +1,24 @@
+body {
+    background-color: #000066;
+}
+h1 {
+    font-weight: bold;
+    color: #FFCC00;
+}
+h3 {
+    font-style: italic;
+    color: #A3A3C2;
+}
+
+footer {
+    font-size: .70em;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 10px;
+    clear: both;
+    bottom: 900px;
+}
+ html {
+     size: 1000px;
+ }
