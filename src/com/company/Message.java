@@ -5,6 +5,7 @@ package com.company;
  */
 public class Message {
     String message;
+    int id;
 
     public Message(String message) {
         this.message = message;

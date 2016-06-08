@@ -6,18 +6,39 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<h1>Messages by {{name}}</h1>
-<h3>Written June 7th 2016.</h3>
+<h1>Messages by {{name}}:</h1>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML = Date();
+</script>
 <form action="/create-message" method="post">
     <input type="text" name="createMessage" placeholder="Enter your message"/>
-    <button type="submit">Message</button>
+    <button type="submit">Submit</button>
 </form>
 <br>
-<ul type="square">
+
+<ol>
     {{#message}}
-    <li>{{message}}</li>
+    <form action="/delete-message" method="post">
+    <li>
+        {{message}}
+        <input type="hidden" name="id" value={{id}}>
+        <button type="submit">Delete Message</button>
+    </li>
+    </form>
     {{/message}}
-</ul>
+</ol>
+<!-- <form action="/delete-message" method="post">
+    <input type="number" name="id" placeholder="#">
+    <button type="submit">Delete Message</button>
+</form> -->
+<br>
+<form action="/edit-message" method="post">
+    <input type="number" name="num" placeholder="#">
+    <input type="text" name="edit" placeholder="Edit your message" size="60">
+    <button type="submit">Edit Message</button>
+</form>
+<br>
 <form action="/logout" method="post">
     <button type="submit">Logout</button>
 </form>
